@@ -4,11 +4,13 @@
 <h1>Here</h1>
 
 <div hx-target="this" hx-swap="outerHTML">
-    <div><label>First Name</label>: Joe</div>
-    <div><label>Last Name</label>: Blow</div>
-    <div><label>Email</label>: joe@blow.com</div>
-    <button hx-get="contact/1/edit" class="btn btn-primary">
+    <div><label>First Name</label>: {{ request.contact.first_name }}</div>
+    <div><label>Last Name</label>: {{ request.contact.last_name }}</div>
+    <div><label>Email</label>: {{ request.contact.email }}</div>
+    <!-- <button hx-get="contact/edit/" contact=request.contact class="btn btn-primary"> -->
+    <button hx-get="{% url 'contact_edit' id=request.contact.id %}">
     Click To Edit
     </button>
 </div>
+
 {% endblock %}

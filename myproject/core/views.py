@@ -7,6 +7,7 @@ def index(request):
     return render(request, "core/index.html", context)
 
 def contact_1_edit(request, id):
+    
     context = {"id": id,}
     return render(request, "core/contact_1_edit.html", context)
 

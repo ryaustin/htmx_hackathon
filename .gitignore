@@ -1,3 +1,9 @@
 /venv*
 .env*
 
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+DjangoApp/static
